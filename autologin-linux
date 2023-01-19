@@ -1,0 +1,15 @@
+#! /bin/bash
+network=`nmcli -t -f name connection show --active`
+if [ $network = "BITS-STUDENT" -o $network = "BITS-STAFF"  ]
+then
+	username="F20190411"
+	password="B3PS043904#"
+
+	time=`date +%s%N | cut -b1-13`
+
+	url="https://fw.bits-pilani.ac.in:8090/login.xml"
+
+	curl --location --request POST $url --header 'Content-Type: application/x-www-form-urlencoded' --data-urlencode 'mode=191' --data-urlencode "username=${username}" --data-urlencode "password=${password}" --data-urlencode "a=${time}" --data-urlencode 'producttype=0'
+fi
+# https://fw.bits-pilani.ac.in:8090/login.xml?mode=191&username=F20190411&password=B3PS045604%23&a=1674143616655&producttype=0
+# <?xml version='1.0' ?><requestresponse><status><![CDATA[LIVE]]></status><message><![CDATA[You are signed in as {username}]]></message><logoutmessage><![CDATA[You have successfully logged off]]></logoutmessage><state><![CDATA[]]></state></requestresponse>

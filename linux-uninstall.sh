@@ -1,8 +1,8 @@
 #! /bin/bash
 if [ -d "/etc/NetworkManager/dispatcher.d" ]
 then
-	sudo rm /etc/NetworkManager/dispatcher.d/autologin
+	sudo rm /etc/NetworkManager/dispatcher.d/autologin-linux
 elif [ -d "/etc/network/if-up.d" ]
 then
-	sudo rm /etc/network/if-up.d/autologin
+	sudo rm /etc/network/if-up.d/autologin-linux
 fi
