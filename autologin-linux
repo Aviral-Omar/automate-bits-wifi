@@ -2,8 +2,8 @@
 network=`nmcli -t -f name connection show --active`
 if [ $network = "BITS-STUDENT" -o $network = "BITS-STAFF"  ]
 then
-	username="F20190411"
-	password="B3PS043904#"
+	username=""
+	password=""
 
 	time=`date +%s%N | cut -b1-13`
 
