@@ -8,9 +8,8 @@ $CIMTriggerClass = Get-CimClass -ClassName MSFT_TaskEventTrigger -Namespace Root
 $Trigger = New-CimInstance -CimClass $CIMTriggerClass -ClientOnly
 $Trigger.Subscription =
 @"
-<QueryList><Query Id="0" Path="System"><Select Path="System">*[System[Provider[@Name='Microsoft-Windows-Iphlpsvc-Trace'] and EventID=4068]]</Select></Query></QueryList>
+<QueryList><Query Id="0" Path="Microsoft-Windows-NetworkProfile/Operational"><Select Path="Microsoft-Windows-NetworkProfile/Operational">*[System[Provider[@Name='Microsoft-Windows-NetworkProfile'] and EventID=10000]]</Select></Query></QueryList>
 "@
 $Trigger.Enabled = $True
 
 Register-ScheduledTask -Action $Action -Trigger $Trigger -TaskName $Name -Description 'Automating logging in to BITS WiFi.' -User 'System' -Force
-#4068
