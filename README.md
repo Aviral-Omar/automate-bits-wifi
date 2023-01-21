@@ -2,6 +2,7 @@
 
 Automating the login process to BITS-STUDENT and BITS-STAFF WiFi on Linux, Windows and Mac.
 
+-   Clone the repository to your system.
 -   Enter credentials in the respective autologin file (autologin-linux for Linux and
     autologin-win.ps1 for Windows).
 -   On Linux, from any terminal, navigate to the directory containing the script and run
