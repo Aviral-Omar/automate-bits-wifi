@@ -1,6 +1,6 @@
 # Automate BITS WiFi
 
-Automating the login process to BITS-STUDENT and BITS-STAFF WiFi on Linux, Windows and Mac.
+Automating the login process to BITS-STUDENT and BITS-STAFF WiFi on Linux and Windows.
 
 -   Clone the repository to your system.
 -   Enter credentials in the respective autologin file (autologin-linux for Linux and
